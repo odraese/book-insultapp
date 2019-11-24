@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class InsultGenerator {
 	public String generateInsult() {
-		String words[][] = {{"Artless", "Bawdy", "Beslubbering"}, {"Base-court", "Bat-fowling", "Beef-witted"}, {"Apple-john", "Baggage", "Barnacle"}};
+		String words[][] = {{"Artless", "Bawdy", "Beslubbering", "Uncapable"}, {"Base-court", "Bat-fowling", "Beef-witted", "Slow-working"}, {"Apple-john", "Baggage", "Barnacle", "Clouderian"}};
 		String vowels = "AEIOU";
 		String article = "an";
 		String firstAdjective = words[0][new Random().nextInt(words[0].length)];
@@ -13,7 +13,7 @@ public class InsultGenerator {
 		if (vowels.indexOf(firstAdjective.charAt(0)) == -1) {
 			article = "a";
 		}
-		return String.format("Thou art %s %s %s %s!", article, firstAdjective, secondAdjective, noun);
+		return String.format("You are %s %s %s %s!", article, firstAdjective, secondAdjective, noun);
 	}
 
 }
