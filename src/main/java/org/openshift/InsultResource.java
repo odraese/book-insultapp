@@ -1,5 +1,6 @@
 package org.openshift;
 
+import java.util.Date;
 import java.util.HashMap;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.GET;
@@ -14,6 +15,7 @@ public class InsultResource {
   public HashMap<String,String> getInsult() {
     HashMap<String, String> theInsult = new HashMap<String, String>();
     theInsult.put("insult", new InsultGenerator().generateInsult());
+    theInsult.put("generated", (new Date()).toString());
     return theInsult;
   }
 }
